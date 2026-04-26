@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import ApolloTracker from '@/components/ApolloTracker'
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -48,7 +49,10 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+       <ApolloTracker />
+
       </body>
+      
     </html>
   );
 }
